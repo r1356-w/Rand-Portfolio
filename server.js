@@ -34,6 +34,19 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+// Test email configuration on startup
+transporter.verify((error, success) => {
+  if (error) {
+    console.log("❌ Email configuration error:", error.message);
+    console.log("📧 Please check your .env file and update:");
+    console.log("   EMAIL_USER=your-email@gmail.com");
+    console.log("   EMAIL_PASS=your-app-password");
+  } else {
+    console.log("✅ Email service ready");
+    console.log(`📧 Sending emails to: ${process.env.EMAIL_USER || 'NOT_CONFIGURED'}`);
+  }
+});
+
 // Contact form endpoint - handles both root and subfolder
 app.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body;
