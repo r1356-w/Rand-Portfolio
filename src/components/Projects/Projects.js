@@ -6,6 +6,24 @@ import SectionLabel from "../UI/SectionLabel";
 const projects = [
   {
     id: 1,
+    title: "Sufra - Community Food Sharing",
+    icon: "🍲",
+    type: "Full-Stack Social Platform",
+    description:
+      "A community-driven platform connecting food donors with people in need. Features real-time food inventory tracking, donation management, and a user-friendly interface for both donors and recipients.",
+    highlights: [
+      "Real-time food inventory management with geolocation services",
+      "User role system for donors, recipients, and administrators",
+      "Integrated food safety tracking and expiration date alerts",
+    ],
+    stack: ["React", "Node.js", "Express", "MongoDB", "Geolocation", "JWT"],
+    accent: "#22D3EE",
+    accentRgb: "34,211,238",
+    github: "https://github.com/r1356-w/Sufra---Community-Food-Sharing-",
+    live: null,
+  },
+  {
+    id: 2,
     title: "Dream Weaver",
     icon: "🧠",
     type: "AI Full-Stack",
@@ -23,7 +41,7 @@ const projects = [
     live: null,
   },
   {
-    id: 2,
+    id: 3,
     title: "Velour Beauty",
     icon: "✨",
     type: "E-Commerce",
@@ -41,7 +59,7 @@ const projects = [
     live: null,
   },
   {
-    id: 3,
+    id: 4,
     title: "Intro Screen Template",
     icon: "📱",
     type: "Flutter UI/UX",
@@ -59,7 +77,7 @@ const projects = [
     live: null,
   },
   {
-    id: 4,
+    id: 5,
     title: "Course Management Institute",
     icon: "🎓",
     type: "Full-Stack Web Application",
