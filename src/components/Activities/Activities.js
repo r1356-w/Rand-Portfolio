@@ -2,18 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import SectionLabel from "../UI/SectionLabel";
 
-const certifications = [
-  { title: "English Language Course: B1 Intermediate", issuer: "Osoos, Sweida, Syria", date: "Jul 2025" },
-  { title: "Flutter Firebase (Insta App)", issuer: "Udemy", date: "Jan 2024" },
-  { title: "Mobile Application Development using Flutter", issuer: "Osoos, Sweida, Syria", date: "Dec 2023" },
-  { title: "ICDL Training Course", issuer: "IECD, Sweida, Syria", date: "Apr 2021" },
-  { title: "General English Conversation Course", issuer: "Al-Maarefa, Sweida, Syria", date: "Jan 2021" },
-  { title: "Life Skills Session — Social Initiative", issuer: "IECD, Sweida, Syria", date: "Jan 2021" },
-];
-
-export default function Certifications() {
+export default function Activities() {
   return (
-    <section id="certifications" className="py-24 px-6">
+    <section id="activities" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -23,35 +14,15 @@ export default function Certifications() {
           viewport={{ once: true }}
           className="mb-14"
         >
-          <SectionLabel>Credentials</SectionLabel>
+          <SectionLabel>Beyond the Job</SectionLabel>
           <h2 className="section-title text-white mb-4">
-            Certifications &{" "}
             <span className="text-gradient-cyan">Activities</span>
           </h2>
           <p className="text-slate-400 max-w-xl">
-            Continuous learning and hands-on training beyond the classroom.
+            Sharpening problem-solving skills outside of day-to-day work.
           </p>
         </motion.div>
 
-        {/* Certification cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-          {certifications.map((cert, i) => (
-            <motion.div
-              key={cert.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.06 }}
-              viewport={{ once: true }}
-              className="glass glass-hover rounded-xl p-5"
-            >
-              <p className="text-sm font-medium text-white mb-1.5 leading-snug">{cert.title}</p>
-              <p className="text-xs text-slate-400">{cert.issuer}</p>
-              <p className="text-xs font-mono text-cyan-400 mt-2">{cert.date}</p>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Activities */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

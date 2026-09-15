@@ -24,7 +24,7 @@ const experiences = [
   {
     role: "Mobile Application Developer",
     company: "Al-Anqoud Multi-Service Platform",
-    period: "11/2025 – Present",
+    period: "11/2025 – 12/2025",
     type: "Volunteer",
     description: "Volunteer Flutter developer for Al-Anqoud, a community initiative improving bread distribution services in Suwayda. Built the citizen- and agent-facing app for managing bread quotas, including a high-speed QR validation module, offline-first local caching with background sync for areas with unstable connectivity, and an accessible, WCAG-conscious UI for all demographics, including elderly users.",
     skills: ["Flutter", "QR Code Scanning", "Offline-First Architecture", "CI/CD", "Accessibility (WCAG)"],

@@ -6,7 +6,7 @@ import Projects from "./components/Projects/Projects";
 import Experience from "./components/Experience/Experience";
 import Education from "./components/Education/Education";
 import Skills from "./components/Skills/Skills";
-import Certifications from "./components/Certifications/Certifications";
+import Activities from "./components/Activities/Activities";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/UI/Footer";
 import CursorGlow from "./components/UI/CursorGlow";
@@ -53,7 +53,7 @@ function App() {
           <Experience />
           <Education />
           <Skills />
-          <Certifications />
+          <Activities />
           <Contact />
         </main>
         <Footer />
