@@ -64,13 +64,13 @@ const projects = [
     icon: "🍲",
     type: "Full-Stack Social Platform",
     description:
-      "A community-driven platform connecting food donors with people in need. Features real-time food inventory tracking, donation management, and a user-friendly interface for both donors and recipients.",
+      "A modern full-stack web platform connecting restaurants with communities through meal donations, shared delivery, and real-time impact tracking.",
     highlights: [
-      "Real-time food inventory management with geolocation services",
-      "User role system for donors, recipients, and administrators",
-      "Integrated food safety tracking and expiration date alerts",
+      "\"Suspended Meals\" donation system letting restaurants offer surplus meals directly to those in need",
+      "Eco-friendly \"Shared Delivery\" matching to combine nearby donation drop-offs",
+      "Real-time impact tracking dashboard powered by Socket.io",
     ],
-    stack: ["React", "Node.js", "Express", "MongoDB", "Geolocation", "JWT"],
+    stack: ["React 18", "Node.js", "MongoDB", "Socket.io", "Tailwind CSS", "Framer Motion"],
     accent: "#22D3EE",
     accentRgb: "34,211,238",
     github: "https://github.com/r1356-w/Sufra---Community-Food-Sharing-",
