@@ -41,6 +41,24 @@ const projects = [
     live: "https://sityx.com",
   },
   {
+    id: 8,
+    title: "debug_layout_hud",
+    icon: "🐞",
+    type: "Open Source · Flutter Package",
+    description:
+      "A published, open-source Flutter package — a debug-only floating HUD overlay that shows live screen size, custom responsive breakpoints, text scale, and text direction directly on-device, with no DevTools tether needed.",
+    highlights: [
+      "Live MediaQuery-driven metrics — the HUD only rebuilds when the screen size actually changes",
+      "Custom named breakpoint resolution (mobile/tablet/desktop or any design system) via a simple API",
+      "Zero production footprint — compiles to a pass-through widget when disabled in release builds",
+    ],
+    stack: ["Flutter", "Dart", "pub.dev", "Open Source", "MIT License"],
+    accent: "#22D3EE",
+    accentRgb: "34,211,238",
+    github: "https://github.com/r1356-w/debug_layout_hud",
+    live: "https://pub.dev/packages/debug_layout_hud",
+  },
+  {
     id: 1,
     title: "Sufra - Community Food Sharing",
     icon: "🍲",
