@@ -110,7 +110,7 @@ const projects = [
     stack: ["MongoDB", "Express", "React", "Node.js", "Stripe", "JWT"],
     accent: "#A855F7",
     accentRgb: "168,85,247",
-    github: "https://github.com/r1356-w",
+    github: "https://github.com/r1356-w/Velour-Beauty",
     live: null,
   },
   {
