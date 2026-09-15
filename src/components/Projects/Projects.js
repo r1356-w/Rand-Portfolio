@@ -5,6 +5,42 @@ import SectionLabel from "../UI/SectionLabel";
 
 const projects = [
   {
+    id: 6,
+    title: "Blink Delivery — Multi-App Platform",
+    icon: "🛵",
+    type: "Mobile Delivery Platform",
+    description:
+      "End-to-end delivery platform built at Casper AI — not just the customer app, but the full ecosystem: the customer ordering app, the merchant/admin app for store owners, and the driver (captain) app for live delivery. Already live, serving real customers and real orders for a local business, paired with an AI layer that profiles customer behavior to personalize offers and reduce churn.",
+    highlights: [
+      "Customer app: feature-first Flutter (GetX, Dio) covering auth, catalog, cart, checkout, and order tracking",
+      "Merchant/admin app: order, product, and review management for store owners",
+      "Driver (captain) app: live GPS route tracking, WebSocket-based dispatch, and an in-app wallet",
+    ],
+    stack: ["Flutter", "GetX", "Dio", "Firebase", "Google Maps", "WebSockets"],
+    accent: "#22D3EE",
+    accentRgb: "34,211,238",
+    github: null,
+    live: null,
+  },
+  {
+    id: 7,
+    title: "Sityx — Cloud Hosting & Dev Agency",
+    icon: "☁️",
+    type: "SaaS Marketing Website",
+    description:
+      "Built and maintain the public website for Sityx — a cloud hosting provider with NVMe infrastructure and AI-driven threat protection, which also runs as a software development agency. A bilingual, conversion-focused site covering hosting plans, domain search, and service inquiries.",
+    highlights: [
+      "Fully bilingual (Arabic/English) with RTL layout switching",
+      "Interactive hosting plan pricing (monthly/yearly toggle) and live domain search & pricing table",
+      "Lead-generation contact form routing requests by service type (web, mobile, AI, hosting)",
+    ],
+    stack: ["React", "Tailwind CSS", "i18n / RTL", "Responsive Design"],
+    accent: "#A855F7",
+    accentRgb: "168,85,247",
+    github: null,
+    live: "https://sityx.com",
+  },
+  {
     id: 1,
     title: "Sufra - Community Food Sharing",
     icon: "🍲",
@@ -55,24 +91,6 @@ const projects = [
     stack: ["MongoDB", "Express", "React", "Node.js", "Stripe", "JWT"],
     accent: "#A855F7",
     accentRgb: "168,85,247",
-    github: "https://github.com/r1356-w",
-    live: null,
-  },
-  {
-    id: 4,
-    title: "Intro Screen Template",
-    icon: "📱",
-    type: "Flutter UI/UX",
-    description:
-      "A polished, production-ready Flutter onboarding template featuring smooth animations, custom illustration slots, and a fully customizable design system for mobile apps.",
-    highlights: [
-      "Custom animated page transitions with Flutter Animate",
-      "Dark/light theme support with dynamic color theming",
-      "Modular widget architecture for easy customization",
-    ],
-    stack: ["Flutter", "Dart", "Flutter Animate", "Provider"],
-    accent: "#22D3EE",
-    accentRgb: "34,211,238",
     github: "https://github.com/r1356-w",
     live: null,
   },

@@ -4,13 +4,22 @@ import SectionLabel from "../UI/SectionLabel";
 
 const experiences = [
   {
-    role: "Flutter Developer | Software Development",
-    company: "Suwayda, Syria",
-    period: "09/2025 – Present",
-    type: "Full-time",
-    description: "Leading the development of service-oriented mobile applications using Flutter to enhance local community services. Responsible for designing and implementing responsive user interfaces and ensuring seamless performance across platforms. Collaborating with back-end teams to integrate RESTful APIs and manage complex application states.",
-    skills: ["Flutter", "React", "RESTful APIs", "UI/UX Design", "Mobile Development"],
+    role: "Flutter Developer",
+    company: "Casper AI",
+    period: "07/2026 – Present",
+    type: "Part-time",
+    description: "Building cross-platform mobile applications with Flutter for AI-driven products. Responsible for implementing clean, maintainable UI architecture, managing complex app state, and integrating with backend and AI services to deliver smooth, production-ready experiences.",
+    skills: ["Flutter", "Dart", "Mobile Development", "State Management", "API Integration"],
     accent: "#22D3EE",
+  },
+  {
+    role: "Full-Stack Developer",
+    company: "Sityx",
+    period: "12/2025 – Present",
+    type: "Part-time · Remote",
+    description: "Working remote as a full-stack developer for Sityx, a company based in Suwayda. Building and maintaining web applications end-to-end — from responsive frontend interfaces to backend APIs, databases, and deployment.",
+    skills: ["React", "Node.js", "Express", "REST APIs", "Databases", "Full-Stack Development"],
+    accent: "#A855F7",
   },
   {
     role: "Flutter Developer Trainee",
@@ -20,33 +29,6 @@ const experiences = [
     description: "Developed cross-platform mobile applications using Flutter, ensuring smooth UI/UX and high performance. Integrated applications with APIs and managed complex application states for reliability. Gained hands-on experience in the full software development lifecycle (SDLC) and received a certificate of appreciation. Collaborated within a team environment to deliver technical projects under tight deadlines.",
     skills: ["Flutter", "Mobile Development", "API Integration", "SDLC", "Team Collaboration"],
     accent: "#A855F7",
-  },
-  {
-    role: "Bachelor of Information and Technology Engineering (ITE)",
-    company: "Syrian Virtual University",
-    period: "2020 – 2026",
-    type: "Education",
-    description: "Bachelor's degree in Information Technology Engineering with specialization in Data Science. Focused on software architecture, algorithms, databases, computer networks, and applied data science.",
-    skills: ["Data Science", "Machine Learning", "Algorithms", "Databases", "Statistical Analysis"],
-    accent: "#22D3EE",
-  },
-  {
-    role: "Bachelor's Degree in Business Administration",
-    company: "University of the People",
-    period: "2020 – 2025",
-    type: "Education",
-    description: "Professional degree in Business Administration complementing technical expertise with business acumen, project management, and strategic planning skills.",
-    skills: ["Business Strategy", "Project Management", "Strategic Planning", "Leadership"],
-    accent: "#A855F7",
-  },
-  {
-    role: "Diploma in Business Administration",
-    company: "University of the People",
-    period: "2025 – Present",
-    type: "Diploma",
-    description: "Advanced diploma in Business Administration focusing on modern business practices and management strategies.",
-    skills: ["Business Administration", "Management", "Strategic Planning"],
-    accent: "#22D3EE",
   },
 ];
 
@@ -64,11 +46,11 @@ export default function Experience() {
         >
           <SectionLabel>Background</SectionLabel>
           <h2 className="section-title text-white mb-4">
-            Experience &{" "}
-            <span className="text-gradient-purple">Education</span>
+            Work{" "}
+            <span className="text-gradient-purple">Experience</span>
           </h2>
           <p className="text-slate-400 max-w-xl">
-            A journey through engineering, development, and continuous learning.
+            A journey through engineering, development, and hands-on delivery.
           </p>
         </motion.div>
 

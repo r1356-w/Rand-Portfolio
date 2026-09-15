@@ -1,117 +1,130 @@
 import React from "react";
 import { motion } from "framer-motion";
+import SectionLabel from "../UI/SectionLabel";
 
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.15 } },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
-};
-
-const educationData = [
-  {
-    degree: "Diploma in Business Administration",
-    institution: "University of the People, United States",
-    period: "2025 – Present",
-    location: "United States",
-    type: "diploma"
-  },
+const education = [
   {
     degree: "Bachelor of Information and Technology Engineering (ITE)",
-    institution: "Syrian Virtual University, Syria",
+    institution: "Syrian Virtual University",
     period: "2020 – 2026",
-    location: "Syria",
-    major: "Major: Data Science",
-    type: "bachelor"
+    type: "Bachelor's Degree",
+    description: "Bachelor's degree in Information Technology Engineering with specialization in Data Science. Focused on software architecture, algorithms, databases, computer networks, and applied data science.",
+    skills: ["Data Science", "Machine Learning", "Algorithms", "Databases", "Statistical Analysis"],
+    accent: "#22D3EE",
   },
   {
     degree: "Bachelor's Degree in Business Administration",
-    institution: "University of the People, United States",
+    institution: "University of the People",
     period: "2020 – 2025",
-    location: "United States",
-    type: "bachelor"
-  }
+    type: "Bachelor's Degree",
+    description: "Professional degree in Business Administration complementing technical expertise with business acumen, project management, and strategic planning skills.",
+    skills: ["Business Strategy", "Project Management", "Strategic Planning", "Leadership"],
+    accent: "#A855F7",
+  },
+  {
+    degree: "Diploma in Business Administration",
+    institution: "University of the People",
+    period: "2025 – Present",
+    type: "Diploma",
+    description: "Advanced diploma in Business Administration focusing on modern business practices and management strategies.",
+    skills: ["Business Administration", "Management", "Strategic Planning"],
+    accent: "#22D3EE",
+  },
 ];
 
 export default function Education() {
   return (
-    <section id="education" className="py-20">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="education" className="py-24 px-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-14"
         >
-          <h2 className="section-title text-white mb-4">Education</h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
-            My academic journey in technology and business administration
+          <SectionLabel>Academics</SectionLabel>
+          <h2 className="section-title text-white mb-4">
+            Education &{" "}
+            <span className="text-gradient-cyan">Learning</span>
+          </h2>
+          <p className="text-slate-400 max-w-xl">
+            Academic foundations spanning information technology and business administration.
           </p>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="space-y-8"
-        >
-          {educationData.map((edu, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              className="glass rounded-xl p-8 border border-slate-800 hover:border-cyan-500/20 transition-all duration-300"
-            >
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className={`w-3 h-3 rounded-full ${
-                      edu.type === 'diploma' ? 'bg-purple-400' : 'bg-cyan-400'
-                    }`} />
-                    <h3 className="text-xl font-semibold text-white">
-                      {edu.degree}
-                    </h3>
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical line */}
+          <div
+            className="absolute left-6 md:left-8 top-0 bottom-0 w-px"
+            style={{
+              background: "linear-gradient(to bottom, #A855F7, rgba(34,211,238,0.5), transparent)",
+            }}
+          />
+
+          <div className="space-y-8">
+            {education.map((edu, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="relative pl-16 md:pl-20"
+              >
+                {/* Timeline dot */}
+                <div
+                  className="absolute left-4 md:left-6 top-6 w-4 h-4 rounded-full border-2"
+                  style={{
+                    borderColor: edu.accent,
+                    background: "#0F172A",
+                    boxShadow: `0 0 12px ${edu.accent}50`,
+                    transform: "translateX(-50%)",
+                  }}
+                />
+
+                {/* Card */}
+                <div className="glass glass-hover rounded-xl p-6">
+                  <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
+                    <div>
+                      <h3 className="font-display text-lg font-semibold text-white">
+                        {edu.degree}
+                      </h3>
+                      <p className="text-sm font-medium mt-0.5" style={{ color: edu.accent }}>
+                        {edu.institution}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span
+                        className="text-xs font-mono px-2 py-1 rounded"
+                        style={{
+                          background: `rgba(${edu.accent === "#22D3EE" ? "34,211,238" : "168,85,247"}, 0.08)`,
+                          border: `1px solid rgba(${edu.accent === "#22D3EE" ? "34,211,238" : "168,85,247"}, 0.15)`,
+                          color: edu.accent,
+                        }}
+                      >
+                        {edu.type}
+                      </span>
+                      <span className="text-xs text-slate-400 font-mono">{edu.period}</span>
+                    </div>
                   </div>
-                  
-                  <p className="text-slate-300 font-medium mb-2">
-                    {edu.institution}
+
+                  <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                    {edu.description}
                   </p>
-                  
-                  {edu.major && (
-                    <p className="text-slate-400 text-sm mb-3">
-                      {edu.major}
-                    </p>
-                  )}
-                  
-                  <div className="flex flex-wrap gap-4 text-sm text-slate-400">
-                    <span className="flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-slate-400" />
-                      {edu.period}
-                    </span>
-                    <span className="flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-slate-400" />
-                      {edu.location}
-                    </span>
+
+                  <div className="flex flex-wrap gap-2">
+                    {edu.skills.map((skill) => (
+                      <span key={skill} className="tag">{skill}</span>
+                    ))}
                   </div>
                 </div>
-                
-                <div className="flex items-center">
-                  <div className={`px-3 py-1 rounded-full text-xs font-mono ${
-                    edu.type === 'diploma' 
-                      ? 'bg-purple-400/10 text-purple-400 border border-purple-400/20'
-                      : 'bg-cyan-400/10 text-cyan-400 border border-cyan-400/20'
-                  }`}>
-                    {edu.type === 'diploma' ? 'Diploma' : 'Bachelor'}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
