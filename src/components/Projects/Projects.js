@@ -114,6 +114,24 @@ const projects = [
     live: null,
   },
   {
+    id: 9,
+    title: "Tala Net — ISP Customer Portal",
+    icon: "📡",
+    type: "Full-Stack Web Application",
+    description:
+      "A production-ready ISP management dashboard where customers track data usage and request speed upgrades, and administrators manage users, subscriptions, and bandwidth requests.",
+    highlights: [
+      "Bilingual (English/Arabic) with automatic RTL layout switching",
+      "HTTP-only session auth with bcrypt hashing, rate limiting, and role-based route protection",
+      "Live animated speed gauge and real-time data usage tracking",
+    ],
+    stack: ["React", "Node.js", "Express", "PostgreSQL", "Sequelize", "Tailwind CSS"],
+    accent: "#22D3EE",
+    accentRgb: "34,211,238",
+    github: "https://github.com/r1356-w/Tala-Net",
+    live: null,
+  },
+  {
     id: 5,
     title: "Course Management Institute",
     icon: "🎓",
