@@ -7,7 +7,7 @@ const experiences = [
     role: "Flutter Developer",
     company: "Casper AI",
     period: "07/2026 – Present",
-    type: "Part-time",
+    type: "Part-time · Remote",
     description: "Building cross-platform mobile applications with Flutter for AI-driven products. Responsible for implementing clean, maintainable UI architecture, managing complex app state, and integrating with backend and AI services to deliver smooth, production-ready experiences.",
     skills: ["Flutter", "Dart", "Mobile Development", "State Management", "API Integration"],
     accent: "#22D3EE",

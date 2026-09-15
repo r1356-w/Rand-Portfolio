@@ -2,6 +2,7 @@
   "name": "rand-oraij-portfolio",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://r1356-w.github.io/Rand-Portfolio",
   "dependencies": {
     "@react-three/drei": "^9.109.2",
     "@react-three/fiber": "^8.17.10",
@@ -23,7 +24,9 @@
     "build": "react-scripts build",
     "build:prod": "node build-for-production.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +50,7 @@
     "autoprefixer": "^10.4.20",
     "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.41",
     "tailwindcss": "^3.4.10"
   }
