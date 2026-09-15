@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Rand-Portfolio/static/css/main.7030e2f9.css",
-    "main.js": "/Rand-Portfolio/static/js/main.d9105095.js",
+    "main.css": "/Rand-Portfolio/static/css/main.a0af9f47.css",
+    "main.js": "/Rand-Portfolio/static/js/main.3fb7e867.js",
     "index.html": "/Rand-Portfolio/index.html",
-    "main.7030e2f9.css.map": "/Rand-Portfolio/static/css/main.7030e2f9.css.map",
-    "main.d9105095.js.map": "/Rand-Portfolio/static/js/main.d9105095.js.map"
+    "main.a0af9f47.css.map": "/Rand-Portfolio/static/css/main.a0af9f47.css.map",
+    "main.3fb7e867.js.map": "/Rand-Portfolio/static/js/main.3fb7e867.js.map"
   },
   "entrypoints": [
-    "static/css/main.7030e2f9.css",
-    "static/js/main.d9105095.js"
+    "static/css/main.a0af9f47.css",
+    "static/js/main.3fb7e867.js"
   ]
 }
