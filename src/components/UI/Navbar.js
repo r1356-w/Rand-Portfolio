@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Logo from "./Logo";
+import Wordmark from "./Wordmark";
 
 const navItems = [
   { label: "Projects", href: "#projects" },
@@ -33,11 +33,8 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group">
-          <Logo size={32} />
-          <span className="font-display font-semibold text-white group-hover:text-cyan-400 transition-colors">
-            rand.dev
-          </span>
+        <a href="#" className="flex items-center group">
+          <Wordmark className="text-xl" />
         </a>
 
         {/* Desktop nav */}
