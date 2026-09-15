@@ -1,15 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Logo from "./Logo";
+import Wordmark from "./Wordmark";
 
 export default function Footer() {
   return (
     <footer className="border-t border-white/5 py-10 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-2">
-          <Logo size={28} />
+        <div className="flex items-center gap-3">
+          <Wordmark className="text-lg" />
           <span className="text-slate-400 text-sm font-body">
-            © {new Date().getFullYear()} Rand Oraij
+            © {new Date().getFullYear()}
           </span>
         </div>
         <div className="flex items-center gap-6">

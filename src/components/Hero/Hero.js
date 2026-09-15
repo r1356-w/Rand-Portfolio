@@ -197,7 +197,7 @@ export default function Hero() {
               />
               
               <img 
-                src="images/profile.jpg" 
+                src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
                 alt="Rand Oraij" 
                 className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl relative z-10"
                 style={{
