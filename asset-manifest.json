@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Rand-Portfolio/static/css/main.24978e31.css",
+    "main.js": "/Rand-Portfolio/static/js/main.2bc61540.js",
+    "index.html": "/Rand-Portfolio/index.html",
+    "main.24978e31.css.map": "/Rand-Portfolio/static/css/main.24978e31.css.map",
+    "main.2bc61540.js.map": "/Rand-Portfolio/static/js/main.2bc61540.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24978e31.css",
+    "static/js/main.2bc61540.js"
+  ]
+}
