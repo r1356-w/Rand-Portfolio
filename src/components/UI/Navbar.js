@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Logo from "./Logo";
 
 const navItems = [
   { label: "Projects", href: "#projects" },
@@ -33,10 +34,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-md flex items-center justify-center"
-            style={{ background: "linear-gradient(135deg, #22D3EE, #A855F7)" }}>
-            <span className="text-navy-900 font-mono font-bold text-sm">RO</span>
-          </div>
+          <Logo size={32} />
           <span className="font-display font-semibold text-white group-hover:text-cyan-400 transition-colors">
             rand.dev
           </span>

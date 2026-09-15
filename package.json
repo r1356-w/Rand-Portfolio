@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://r1356-w.github.io/Rand-Portfolio",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@react-three/drei": "^9.109.2",
     "@react-three/fiber": "^8.17.10",
     "ajv": "^8.18.0",
