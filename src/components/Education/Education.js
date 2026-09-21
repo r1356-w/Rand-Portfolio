@@ -4,6 +4,15 @@ import SectionLabel from "../UI/SectionLabel";
 
 const education = [
   {
+    degree: "Master's in Web Science and Artificial Intelligence",
+    institution: "Syrian Virtual University",
+    period: "2026 – Present",
+    type: "Master's Degree",
+    description: "Graduate studies in Web Science and Artificial Intelligence, deepening expertise in AI systems, intelligent web technologies, and applied machine learning — building directly on undergraduate work in Data Science.",
+    skills: ["Artificial Intelligence", "Web Science", "Machine Learning", "AI Systems"],
+    accent: "#A855F7",
+  },
+  {
     degree: "Bachelor of Information and Technology Engineering (ITE)",
     institution: "Syrian Virtual University",
     period: "2020 – 2026",
