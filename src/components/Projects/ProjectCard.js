@@ -27,11 +27,11 @@ export default function ProjectCard({ project, index }) {
         style={{ background: `linear-gradient(90deg, ${project.accent}, transparent)` }}
       />
 
-      <div className="p-6 md:p-7">
+      <div className="p-5">
         {/* Header row */}
-        <div className="flex items-start justify-between mb-4">
+        <div className="flex items-start justify-between mb-3">
           <div
-            className="w-11 h-11 rounded-xl flex items-center justify-center text-xl"
+            className="w-9 h-9 rounded-lg flex items-center justify-center text-base"
             style={{
               background: `rgba(${project.accentRgb}, 0.1)`,
               border: `1px solid rgba(${project.accentRgb}, 0.2)`,
@@ -54,19 +54,19 @@ export default function ProjectCard({ project, index }) {
         </div>
 
         {/* Title */}
-        <h3 className="font-display text-xl font-semibold text-white mb-2 group-hover:text-gradient-cyan">
+        <h3 className="font-display text-base font-semibold text-white mb-1.5 group-hover:text-gradient-cyan">
           {project.title}
         </h3>
 
         {/* Description */}
-        <p className="text-slate-400 text-sm leading-relaxed mb-5">
+        <p className="text-slate-400 text-xs leading-relaxed mb-3 line-clamp-2">
           {project.description}
         </p>
 
         {/* Features */}
-        <ul className="space-y-1.5 mb-5">
-          {project.highlights.map((h, i) => (
-            <li key={i} className="flex items-start gap-2 text-xs text-slate-400">
+        <ul className="space-y-1 mb-3">
+          {project.highlights.slice(0, 2).map((h, i) => (
+            <li key={i} className="flex items-start gap-2 text-xs text-slate-400 line-clamp-1">
               <span style={{ color: project.accent }} className="mt-0.5 shrink-0">▸</span>
               {h}
             </li>
@@ -74,7 +74,7 @@ export default function ProjectCard({ project, index }) {
         </ul>
 
         {/* Tech stack */}
-        <div className="flex flex-wrap gap-2 mb-5">
+        <div className="flex flex-wrap gap-1.5 mb-3">
           {project.stack.map((tech) => (
             <span key={tech} className="tag" style={{
               color: project.accent,
@@ -87,7 +87,7 @@ export default function ProjectCard({ project, index }) {
         </div>
 
         {/* Links */}
-        <div className="flex items-center gap-4 pt-4 border-t border-white/5">
+        <div className="flex items-center gap-4 pt-3 border-t border-white/5">
           {project.github && (
             <a
               href={project.github}
