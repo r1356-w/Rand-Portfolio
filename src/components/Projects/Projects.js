@@ -5,6 +5,24 @@ import SectionLabel from "../UI/SectionLabel";
 
 const projects = [
   {
+    id: 10,
+    title: "Hebr — Private Tutoring Platform",
+    icon: "📚",
+    type: "Full-Stack Web & Mobile Platform",
+    description:
+      "A live tutoring marketplace connecting students and parents in the UAE with vetted private tutors — subscription-based hour packages, tutor and agent onboarding, and progress reporting for parents.",
+    highlights: [
+      "Web platform built with React and Node.js, plus a companion Flutter mobile app",
+      "Package-based subscription system with tiered AED pricing and tutor vetting",
+      "Separate onboarding flows for tutors and referral agents",
+    ],
+    stack: ["React", "Node.js", "Flutter"],
+    accent: "#A855F7",
+    accentRgb: "168,85,247",
+    github: null,
+    live: "https://hebr-w.com",
+  },
+  {
     id: 6,
     title: "Blink Delivery — Multi-App Platform",
     icon: "🛵",
