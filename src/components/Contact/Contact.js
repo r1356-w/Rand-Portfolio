@@ -224,7 +224,15 @@ export default function Contact() {
                   Error Sending Message
                 </h3>
                 <p className="text-slate-400 text-sm mb-4">
-                  Failed to send your message. Please try again or email directly.
+                  Failed to send your message. Please try again, or reach me directly at{" "}
+                  <a href="mailto:randorij27@gmail.com" className="text-cyan-400 hover:underline">
+                    randorij27@gmail.com
+                  </a>{" "}
+                  or on{" "}
+                  <a href="https://wa.me/963992684568" target="_blank" rel="noreferrer" className="text-cyan-400 hover:underline">
+                    WhatsApp
+                  </a>
+                  .
                 </p>
                 <button
                   onClick={() => setStatus(null)}
