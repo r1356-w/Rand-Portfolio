@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import Wordmark from "./Wordmark";
 
 export default function Footer() {
@@ -31,6 +30,9 @@ export default function Footer() {
           ))}
         </div>
       </div>
+      <p className="max-w-6xl mx-auto mt-6 text-center text-xs text-slate-500">
+        This site uses Google Analytics to collect anonymous visit statistics.
+      </p>
     </footer>
   );
 }

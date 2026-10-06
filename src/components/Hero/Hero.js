@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.12 } },
+  visible: { transition: { staggerChildren: 0.05 } },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+  hidden: { opacity: 0, y: 14 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } },
 };
 
 const badges = ["Flutter", "React", "Django", "Node.js", "Data Science"];
@@ -20,7 +20,7 @@ export default function Hero() {
       className="relative min-h-screen flex items-center pt-20"
     >
       <div className="max-w-6xl mx-auto px-6 w-full">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-12 lg:gap-20 items-center">
           {/* Left — text content */}
           <motion.div
             variants={containerVariants}
@@ -52,8 +52,8 @@ export default function Hero() {
             {/* Title */}
             <motion.div variants={itemVariants} className="mb-6">
               <p className="font-display text-xl md:text-2xl font-medium text-slate-400">
-                IT Engineer &{" "}
-                <span className="shimmer-text">Full-Stack Developer</span>
+                <span className="shimmer-text">Full-Stack Developer</span>{" "}
+                (Web &amp; Mobile)
               </p>
             </motion.div>
 
@@ -62,10 +62,10 @@ export default function Hero() {
               variants={itemVariants}
               className="text-slate-400 text-base leading-relaxed mb-8 max-w-md"
             >
-              I craft high-performance digital products — from intuitive mobile apps
-              to intelligent AI-powered systems. Specializing in{" "}
-              <span className="text-white font-medium">Flutter, React, Django</span>,
-              and scalable data pipelines.
+              I build and ship production applications — from a live multi-app
+              delivery platform to bilingual web apps and AI-powered products.
+              Specializing in{" "}
+              <span className="text-white font-medium">Flutter, React, and Node.js</span>.
             </motion.p>
 
             {/* Tech badges */}
@@ -91,8 +91,8 @@ export default function Hero() {
               className="mt-12 grid grid-cols-3 gap-6"
             >
               {[
-                { value: "10+", label: "Projects" },
-                { value: "3+", label: "Years Exp." },
+                { value: "9+", label: "Projects" },
+                { value: "2+", label: "Years Exp." },
                 { value: "5+", label: "Tech Stacks" },
               ].map((stat) => (
                 <div key={stat.label} className="flex flex-col">
@@ -111,9 +111,8 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="order-1 md:order-2 relative"
-            style={{ height: "480px" }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="order-1 md:order-2 relative h-[230px] md:h-[480px]"
           >
             {/* Glow underneath sphere */}
             <div
@@ -123,7 +122,7 @@ export default function Hero() {
                 filter: "blur(30px)",
               }}
             />
-            <div className="relative w-full h-full flex items-center justify-center">
+            <div className="relative h-full aspect-square mx-auto md:aspect-auto md:w-full flex items-center justify-center">
               {/* Orbital lines - Very close to image */}
               <motion.div
                 className="absolute inset-0 rounded-full border border-dashed border-purple-400 opacity-70"
@@ -197,9 +196,11 @@ export default function Hero() {
               />
               
               <img 
-                src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
-                alt="Rand Oraij" 
-                className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl relative z-10"
+                src={`${process.env.PUBLIC_URL}/images/profile.webp`}
+                alt="Rand Oraij"
+                width={640}
+                height={640}
+                className="w-36 h-36 sm:w-44 sm:h-44 md:w-80 md:h-80 rounded-full object-cover shadow-2xl relative z-10"
                 style={{
                   boxShadow: "0 0 60px rgba(34,211,238,0.3), 0 0 120px rgba(168,85,247,0.1)"
                 }}
@@ -210,14 +211,14 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-12 left-0 glass rounded-xl px-3 py-2 text-xs font-mono text-cyan-400"
+              className="hidden sm:block absolute top-12 left-0 glass rounded-xl px-3 py-2 text-xs font-mono text-cyan-400"
             >
               &lt;React /&gt;
             </motion.div>
             <motion.div
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute bottom-16 right-0 glass rounded-xl px-3 py-2 text-xs font-mono"
+              className="hidden sm:block absolute bottom-16 right-0 glass rounded-xl px-3 py-2 text-xs font-mono"
               style={{ color: "#A855F7" }}
             >
               Node.js
@@ -225,7 +226,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="absolute top-1/2 right-4 glass rounded-xl px-3 py-2 text-xs font-mono text-cyan-400"
+              className="hidden sm:block absolute top-1/2 right-4 glass rounded-xl px-3 py-2 text-xs font-mono text-cyan-400"
             >
               Flutter
             </motion.div>

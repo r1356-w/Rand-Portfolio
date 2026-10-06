@@ -63,6 +63,13 @@ export default function ProjectCard({ project, index }) {
           {project.description}
         </p>
 
+        {project.role && (
+          <p className="text-xs text-slate-500 mb-2 line-clamp-2">
+            <span style={{ color: project.accent }}>My role: </span>
+            {project.role}
+          </p>
+        )}
+
         {/* Features */}
         <ul className="space-y-1 mb-3">
           {project.highlights.slice(0, 2).map((h, i) => (

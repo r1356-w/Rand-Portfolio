@@ -34,7 +34,7 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center group">
+        <a href="#hero" aria-label="Back to top" className="flex items-center group">
           <Wordmark className="text-xl" />
         </a>
 
@@ -56,15 +56,23 @@ export default function Navbar() {
         </nav>
 
         {/* CTA */}
-        <motion.a
-          href="#contact"
-          className="hidden md:block btn-outline text-xs py-2 px-4"
+        <motion.div
+          className="hidden md:flex items-center gap-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
+          transition={{ delay: 0.4 }}
         >
-          Hire Me
-        </motion.a>
+          <a
+            href={`${process.env.PUBLIC_URL}/Rand_Oraij_CV.pdf`}
+            download
+            className="hidden lg:block text-xs text-slate-400 hover:text-cyan-400 transition-colors px-3 py-2"
+          >
+            Download CV
+          </a>
+          <a href="#contact" className="btn-outline text-xs py-2 px-4">
+            Hire Me
+          </a>
+        </motion.div>
 
         {/* Mobile menu btn */}
         <button
@@ -101,6 +109,14 @@ export default function Navbar() {
                   {item.label}
                 </a>
               ))}
+              <a
+                href={`${process.env.PUBLIC_URL}/Rand_Oraij_CV.pdf`}
+                download
+                className="text-slate-400 hover:text-white transition-colors py-2"
+                onClick={() => setMenuOpen(false)}
+              >
+                Download CV
+              </a>
               <a href="#contact" className="btn-primary text-center mt-2">
                 Hire Me
               </a>

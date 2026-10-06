@@ -9,6 +9,7 @@ const projects = [
     title: "Hebr — Private Tutoring Platform",
     icon: "📚",
     type: "Full-Stack Web & Mobile Platform",
+    role: "Built the React/Node.js web app and the Flutter mobile app.",
     description:
       "A live tutoring marketplace connecting students and parents in the UAE with vetted private tutors — subscription-based hour packages, tutor and agent onboarding, and progress reporting for parents.",
     highlights: [
@@ -27,6 +28,7 @@ const projects = [
     title: "Blink Delivery — Multi-App Platform",
     icon: "🛵",
     type: "Mobile Delivery Platform",
+    role: "Flutter developer across the customer, merchant/admin, and driver apps.",
     description:
       "End-to-end delivery platform built at Casper AI — not just the customer app, but the full ecosystem: the customer ordering app, the merchant/admin app for store owners, and the driver (captain) app for live delivery. Already live, serving real customers and real orders for a local business, paired with an AI layer that profiles customer behavior to personalize offers and reduce churn.",
     highlights: [
@@ -110,7 +112,7 @@ const projects = [
     stack: ["Flutter", "Riverpod", "Docker", "NVIDIA CUDA", "Vue.js", "Node.js"],
     accent: "#22D3EE",
     accentRgb: "34,211,238",
-    github: "https://github.com/r1356-w",
+    github: "https://github.com/r1356-w/Dream-Weaver",
     live: null,
   },
   {

@@ -55,7 +55,7 @@ const contactLinks = [
 ];
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", message: "", company: "" });
   const [status, setStatus] = useState(null); // null | "sending" | "sent" | "error"
 
   const handleChange = (e) =>
@@ -63,6 +63,13 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // "company" is a honeypot: real visitors never see or fill it, bots do.
+    if (form.company) {
+      setStatus("sent");
+      return;
+    }
+
     setStatus("sending");
 
     try {
@@ -73,7 +80,7 @@ export default function Contact() {
         { publicKey: EMAILJS_PUBLIC_KEY }
       );
       setStatus("sent");
-      setForm({ name: "", email: "", message: "" });
+      setForm({ name: "", email: "", message: "", company: "" });
     } catch (error) {
       console.error('Error sending email:', error);
       setStatus("error");
@@ -159,8 +166,19 @@ export default function Contact() {
                 <span className="text-xs font-mono text-cyan-400">Currently available</span>
               </div>
               <p className="text-slate-400 text-sm">
-                Open to full-time roles, freelance contracts, and interesting collaborations.
+                Open to remote full-time roles, freelance contracts, and interesting collaborations.
+                Based in UTC+3 — usually replies within 24 hours.
               </p>
+              <a
+                href={`${process.env.PUBLIC_URL}/Rand_Oraij_CV.pdf`}
+                download
+                className="btn-outline inline-flex items-center gap-2 mt-4 text-xs py-2 px-4"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
+                </svg>
+                Download CV
+              </a>
             </div>
           </motion.div>
 
@@ -217,8 +235,18 @@ export default function Contact() {
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="glass rounded-2xl p-7 space-y-5">
+                <input
+                  type="text"
+                  name="company"
+                  value={form.company}
+                  onChange={handleChange}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+                />
                 {[
-                  { name: "name", label: "Your Name", type: "text", placeholder: "Rand Oraij" },
+                  { name: "name", label: "Your Name", type: "text", placeholder: "Your name" },
                   { name: "email", label: "Email Address", type: "email", placeholder: "you@example.com" },
                 ].map((field) => (
                   <div key={field.name}>
@@ -298,6 +326,9 @@ export default function Contact() {
                     </>
                   )}
                 </button>
+                <p className="text-xs text-slate-500 text-center font-mono">
+                  Usually replies within 24 hours · Remote · UTC+3
+                </p>
               </form>
             )}
           </motion.div>
