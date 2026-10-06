@@ -11,7 +11,7 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } },
 };
 
-const badges = ["Flutter", "React", "Django", "Node.js", "Data Science"];
+const badges = ["Flutter", "React", "Node.js", "TypeScript", "Firebase"];
 
 export default function Hero() {
   return (

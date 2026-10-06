@@ -17,7 +17,7 @@ const education = [
     institution: "Syrian Virtual University",
     period: "2020 – 2026",
     type: "Bachelor's Degree",
-    description: "Bachelor's degree in Information Technology Engineering with specialization in Data Science. Focused on software architecture, algorithms, databases, computer networks, and applied data science.",
+    description: "Bachelor's degree in Information and Technology Engineering with specialization in Data Science. Focused on software architecture, algorithms, databases, computer networks, and applied data science.",
     skills: ["Data Science", "Machine Learning", "Algorithms", "Databases", "Statistical Analysis"],
     accent: "#22D3EE",
   },
