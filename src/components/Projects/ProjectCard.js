@@ -123,7 +123,7 @@ export default function ProjectCard({ project, index }) {
             </a>
           )}
           {!project.github && !project.live && (
-            <span className="text-xs text-slate-500 font-mono">Private client project</span>
+            <span className="text-xs text-slate-500 font-mono">{project.note || "Private client project"}</span>
           )}
         </div>
       </div>
