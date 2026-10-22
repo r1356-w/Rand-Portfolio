@@ -91,7 +91,7 @@ export default function Hero() {
               className="mt-12 grid grid-cols-3 gap-6"
             >
               {[
-                { value: "9+", label: "Projects" },
+                { value: "10+", label: "Projects" },
                 { value: "3+", label: "Years Exp." },
                 { value: "5+", label: "Tech Stacks" },
               ].map((stat) => (
