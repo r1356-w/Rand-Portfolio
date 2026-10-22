@@ -45,7 +45,7 @@ const projects = [
   },
   {
     id: 6,
-    title: "Blink Delivery — Multi-App Platform",
+    title: "Wink Delivery — Multi-App Platform",
     icon: "🛵",
     type: "Mobile Delivery Platform",
     role: "Flutter developer across the customer, merchant/admin, and driver apps.",
