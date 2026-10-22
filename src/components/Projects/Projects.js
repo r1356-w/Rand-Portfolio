@@ -21,14 +21,7 @@ const featuredProject = {
   accent: "#22D3EE",
   accentRgb: "34,211,238",
   store: null,
-  images: [
-    {
-      src: "/images/projects/wasla-feature.webp",
-      alt: "Wasla — Arabic word-connect puzzle, Google Play feature graphic",
-      width: 1024,
-      height: 500,
-    },
-  ],
+  icon: "/images/projects/wasla-icon.svg",
 };
 
 const projects = [

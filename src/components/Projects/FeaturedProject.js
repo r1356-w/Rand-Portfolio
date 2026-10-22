@@ -1,23 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { createPortal } from "react-dom";
+import React from "react";
 import { motion } from "framer-motion";
 
-const assetUrl = (path) => `${process.env.PUBLIC_URL}${path}`;
-
 export default function FeaturedProject({ project }) {
-  const [active, setActive] = useState(0);
-  const [lightbox, setLightbox] = useState(false);
-  const current = project.images[active];
-
-  useEffect(() => {
-    if (!lightbox) return undefined;
-    const onKey = (e) => {
-      if (e.key === "Escape") setLightbox(false);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [lightbox]);
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -27,49 +11,26 @@ export default function FeaturedProject({ project }) {
       className="glass rounded-2xl overflow-hidden mb-8"
       style={{ border: `1px solid rgba(${project.accentRgb}, 0.25)` }}
     >
-      <div className="grid md:grid-cols-2">
-        {/* Gallery */}
-        <div className="p-3 md:p-4" style={{ background: "rgba(0,0,0,0.18)" }}>
-          <button
-            type="button"
-            onClick={() => setLightbox(true)}
-            aria-label={`Enlarge: ${current.alt}`}
-            className="block w-full rounded-xl overflow-hidden cursor-zoom-in"
-          >
-            <img
-              src={assetUrl(current.src)}
-              alt={current.alt}
-              width={current.width}
-              height={current.height}
-              loading="lazy"
-              className="w-full h-auto block"
-            />
-          </button>
-
-          {project.images.length > 1 && (
-            <div className="flex gap-2 mt-3 overflow-x-auto pb-1">
-              {project.images.map((img, i) => (
-                <button
-                  key={img.src}
-                  type="button"
-                  onClick={() => setActive(i)}
-                  aria-label={`Show image ${i + 1}: ${img.alt}`}
-                  className="shrink-0 rounded-lg overflow-hidden"
-                  style={{
-                    width: 72,
-                    border: `2px solid ${i === active ? project.accent : "transparent"}`,
-                    opacity: i === active ? 1 : 0.6,
-                  }}
-                >
-                  <img src={assetUrl(img.src)} alt="" loading="lazy" className="w-full h-auto block" />
-                </button>
-              ))}
-            </div>
-          )}
+      <div className="grid md:grid-cols-[260px_1fr]">
+        {/* App icon */}
+        <div
+          className="flex items-center justify-center p-8"
+          style={{
+            background: `radial-gradient(circle at center, rgba(${project.accentRgb}, 0.14) 0%, transparent 70%)`,
+          }}
+        >
+          <img
+            src={`${process.env.PUBLIC_URL}${project.icon}`}
+            alt={`${project.title} app icon`}
+            width={512}
+            height={512}
+            className="w-28 h-28 md:w-40 md:h-40 rounded-[22%]"
+            style={{ boxShadow: `0 16px 50px rgba(${project.accentRgb}, 0.25)` }}
+          />
         </div>
 
         {/* Details */}
-        <div className="p-6 md:p-8 flex flex-col justify-center">
+        <div className="p-6 md:p-8 md:pl-2 flex flex-col justify-center">
           <div className="flex flex-wrap items-center gap-2 mb-3">
             <span
               className="text-xs font-mono px-2 py-1 rounded"
@@ -129,26 +90,6 @@ export default function FeaturedProject({ project }) {
           )}
         </div>
       </div>
-
-      {lightbox &&
-        createPortal(
-          <div
-            role="dialog"
-            aria-modal="true"
-            aria-label={current.alt}
-            onClick={() => setLightbox(false)}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 cursor-zoom-out"
-            style={{ background: "rgba(2,6,23,0.9)" }}
-          >
-            <img
-              src={assetUrl(current.src)}
-              alt={current.alt}
-              className="max-w-full max-h-full rounded-xl"
-              style={{ boxShadow: "0 20px 80px rgba(0,0,0,0.6)" }}
-            />
-          </div>,
-          document.body
-        )}
     </motion.div>
   );
 }
