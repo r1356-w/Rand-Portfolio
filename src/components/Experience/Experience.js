@@ -15,10 +15,14 @@ const experiences = [
   {
     role: "Full-Stack Developer",
     company: "Sityx",
-    period: "12/2025 – Present",
-    type: "Part-time · Remote",
-    description: "Working remote as a full-stack developer for Sityx, a company based in Suwayda. Building and maintaining web applications end-to-end — from responsive frontend interfaces to backend APIs, databases, and deployment.",
-    skills: ["React", "Node.js", "Express", "REST APIs", "Databases", "Full-Stack Development"],
+    period: "05/2023 – Present",
+    type: "Full-time · Remote",
+    description: "Working remote for Sityx, a cloud hosting and software company based in Suwayda. I joined as a backend developer, moved into Flutter development after completing the company's training, and today build and maintain web applications end-to-end — from responsive frontends to backend APIs, databases, and deployment.",
+    phases: [
+      { period: "02/2026 – Present", label: "Full-time", title: "Full-Stack Developer" },
+      { period: "05/2023 – 01/2026", label: "Part-time", title: "Backend Developer, then Flutter Developer after training" },
+    ],
+    skills: ["Node.js", "Express", "React", "Flutter", "REST APIs", "Databases"],
     accent: "#A855F7",
   },
   {
@@ -123,6 +127,18 @@ export default function Experience() {
                   <p className="text-slate-400 text-sm leading-relaxed mb-4">
                     {exp.description}
                   </p>
+
+                  {exp.phases && (
+                    <ul className="mb-4 space-y-2 border-l pl-4" style={{ borderColor: `${exp.accent}40` }}>
+                      {exp.phases.map((phase) => (
+                        <li key={phase.period} className="text-xs text-slate-400">
+                          <span className="font-mono" style={{ color: exp.accent }}>{phase.period}</span>
+                          <span className="text-slate-500"> · {phase.label} · </span>
+                          <span className="text-slate-300">{phase.title}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
 
                   <div className="flex flex-wrap gap-2">
                     {exp.skills.map((skill) => (

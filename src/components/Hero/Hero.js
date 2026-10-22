@@ -92,7 +92,7 @@ export default function Hero() {
             >
               {[
                 { value: "9+", label: "Projects" },
-                { value: "2+", label: "Years Exp." },
+                { value: "3+", label: "Years Exp." },
                 { value: "5+", label: "Tech Stacks" },
               ].map((stat) => (
                 <div key={stat.label} className="flex flex-col">
