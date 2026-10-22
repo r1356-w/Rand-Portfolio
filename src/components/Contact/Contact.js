@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import SectionLabel from "../UI/SectionLabel";
@@ -57,6 +57,15 @@ const contactLinks = [
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "", company: "" });
   const [status, setStatus] = useState(null); // null | "sending" | "sent" | "error"
+
+  const resultRef = useRef(null);
+
+  // The form is taller than the result card, so bring the result into view after sending
+  useEffect(() => {
+    if (status === "sent" || status === "error") {
+      resultRef.current?.scrollIntoView({ block: "center", behavior: "smooth" });
+    }
+  }, [status]);
 
   const handleChange = (e) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -184,15 +193,15 @@ export default function Contact() {
 
           {/* Contact form */}
           <motion.div
+            ref={resultRef}
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
             {status === "sent" ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+              <div
+                role="status"
                 className="glass rounded-2xl p-10 flex flex-col items-center justify-center text-center h-full min-h-[360px]"
               >
                 <div
@@ -207,11 +216,10 @@ export default function Contact() {
                 <p className="text-slate-400 text-sm">
                   Thanks for reaching out. I'll get back to you within 24 hours.
                 </p>
-              </motion.div>
+              </div>
             ) : status === "error" ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+              <div
+                role="alert"
                 className="glass rounded-2xl p-10 flex flex-col items-center justify-center text-center h-full min-h-[360px]"
               >
                 <div
@@ -240,7 +248,7 @@ export default function Contact() {
                 >
                   Try Again
                 </button>
-              </motion.div>
+              </div>
             ) : (
               <form onSubmit={handleSubmit} className="glass rounded-2xl p-7 space-y-5">
                 <input
