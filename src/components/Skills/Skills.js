@@ -9,7 +9,7 @@ const skillCategories = [
     accent: "#22D3EE",
     accentRgb: "34,211,238",
     tagClass: "tag",
-    skills: ["Flutter", "Dart", "GetX", "Riverpod", "Dio", "Google Maps", "Offline-First", "React Native (basic)"],
+    skills: ["Flutter", "Dart", "GetX", "Riverpod", "Dio", "Google Maps", "Push Notifications", "Offline-First", "React Native (basic)"],
   },
   {
     label: "Front-End",
@@ -41,7 +41,7 @@ const skillCategories = [
     accent: "#22D3EE",
     accentRgb: "34,211,238",
     tagClass: "tag",
-    skills: ["Git & GitHub", "Docker", "CI/CD", "Stripe", "Figma"],
+    skills: ["Git & GitHub", "Docker", "CI/CD", "Unit Testing", "Stripe", "Figma"],
   },
   {
     label: "AI-Assisted Development",
