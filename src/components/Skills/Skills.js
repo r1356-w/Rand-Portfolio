@@ -25,7 +25,7 @@ const skillCategories = [
     accent: "#22D3EE",
     accentRgb: "34,211,238",
     tagClass: "tag",
-    skills: ["Node.js", "Express.js", "Django", "Flask", "Python", "REST APIs", "WebSockets", "JWT Auth"],
+    skills: ["Node.js", "Express.js", "REST APIs", "WebSockets", "Socket.io", "JWT Auth"],
   },
   {
     label: "Databases",

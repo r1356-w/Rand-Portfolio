@@ -38,14 +38,23 @@ export default function Activities() {
               🏆
             </span>
             <h3 className="font-display font-semibold text-white">
-              Competitive Programming — SVU Programming Contest 2024
+              University ICPC Team Participant — Syrian Virtual University, 2024
             </h3>
           </div>
-          <p className="text-slate-400 text-sm leading-relaxed">
-            Participated in the Syrian Virtual University Programming Contest 2024 after completing
-            an intensive bootcamp in Data Structures, Algorithms, and problem-solving techniques —
-            sharpening analytical thinking using C++ and Python in a competitive setting.
-          </p>
+          <ul className="text-slate-400 text-sm leading-relaxed space-y-2 list-disc pl-5 marker:text-purple-400">
+            <li>
+              Competed on a university team in the Syrian university-level ICPC competition, the
+              pathway for selecting teams for the Arab Collegiate Programming Contest (ACPC).
+            </li>
+            <li>
+              Selected from approximately 500 participants for an advanced coaching cohort and
+              completed one month of intensive training (7–10 hours a day).
+            </li>
+            <li>
+              Solved 205 problems on Codeforces, practicing graphs, dynamic programming, greedy
+              algorithms, and number theory in C++ and Python.
+            </li>
+          </ul>
         </motion.div>
       </div>
     </section>
