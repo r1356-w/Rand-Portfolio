@@ -50,7 +50,7 @@ const projects = [
     type: "Mobile Delivery Platform",
     role: "Flutter developer across the customer, merchant/admin, and driver apps.",
     description:
-      "End-to-end delivery platform built at Casper AI — not just the customer app, but the full ecosystem: the customer ordering app, the merchant/admin app for store owners, and the driver (captain) app for live delivery. Already live, serving real customers and real orders for a local business, paired with an AI layer that profiles customer behavior to personalize offers and reduce churn.",
+      "End-to-end delivery platform built at Casper AI — not just the customer app, but the full ecosystem: the customer ordering app, the merchant/admin app for store owners, and the driver (captain) app for live delivery. Already live, serving real customers and real orders for a local business, paired with an AI layer that personalizes offers based on customer behavior.",
     highlights: [
       "Customer app: feature-first Flutter (GetX, Dio) covering auth, catalog, cart, checkout, and order tracking",
       "Merchant/admin app: order, product, and review management for store owners",
