@@ -21,7 +21,8 @@ const projects = [
     accent: "#22D3EE",
     accentRgb: "34,211,238",
     github: null,
-    live: null,
+    live: "https://play.google.com/store/apps/details?id=com.randoraij.wasla",
+    liveLabel: "Google Play",
     note: "Published on Google Play",
   },
   {
@@ -45,7 +46,7 @@ const projects = [
   },
   {
     id: 6,
-    title: "Wink Delivery — Multi-App Platform",
+    title: "Blink Delivery — Multi-App Platform",
     icon: "🛵",
     type: "Mobile Delivery Platform",
     role: "Flutter developer across the customer, merchant/admin, and driver apps.",
