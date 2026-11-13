@@ -94,7 +94,7 @@ package.json                 # Dependencies and scripts
 - **Profile Image**: Circular profile photo with glowing shadow effect
 - **Orbital Animations**: Three rotating rings around profile
 - **Floating Tech Labels**: Animated technology badges
-- **Status Badge**: "Available for opportunities" indicator
+- **Status Badge**: "Open to work" indicator
 
 ### Experience & Education
 - **Timeline Layout**: Vertical timeline with connecting line

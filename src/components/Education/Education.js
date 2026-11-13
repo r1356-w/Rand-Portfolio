@@ -33,7 +33,7 @@ const education = [
   {
     degree: "Diploma in Business Administration",
     institution: "University of the People",
-    period: "2025 – Present",
+    period: "2025 – 11/2026",
     type: "Diploma",
     description: "Diploma in Business Administration focusing on modern business practices and management strategies.",
     skills: ["Business Administration", "Management", "Strategic Planning"],

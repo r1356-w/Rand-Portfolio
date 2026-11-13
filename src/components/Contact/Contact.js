@@ -172,7 +172,7 @@ export default function Contact() {
             <div className="glass rounded-xl p-5 mt-6">
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-                <span className="text-xs font-mono text-cyan-400">Currently available</span>
+                <span className="text-xs font-mono text-cyan-400">Open to work</span>
               </div>
               <p className="text-slate-400 text-sm">
                 Open to remote full-time roles, freelance contracts, and interesting collaborations.

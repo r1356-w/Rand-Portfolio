@@ -6,6 +6,7 @@ import SectionLabel from "../UI/SectionLabel";
 const projects = [
   {
     id: 11,
+    platform: "mobile",
     title: "Wasla (وصلة) — Arabic Puzzle Game",
     icon: "🧩",
     type: "Mobile Game",
@@ -27,6 +28,7 @@ const projects = [
   },
   {
     id: 10,
+    platform: "web",
     title: "Hebr — Private Tutoring Platform",
     icon: "📚",
     type: "Full-Stack Web & Mobile Platform",
@@ -46,6 +48,7 @@ const projects = [
   },
   {
     id: 6,
+    platform: "mobile",
     title: "Blink Delivery — Multi-App Platform",
     icon: "🛵",
     type: "Mobile Delivery Platform",
@@ -65,6 +68,7 @@ const projects = [
   },
   {
     id: 7,
+    platform: "web",
     title: "Sityx — Cloud Hosting & Dev Agency",
     icon: "☁️",
     type: "SaaS Marketing Website",
@@ -83,6 +87,7 @@ const projects = [
   },
   {
     id: 8,
+    platform: "mobile",
     title: "debug_layout_hud",
     icon: "🐞",
     type: "Open Source · Flutter Package",
@@ -101,6 +106,7 @@ const projects = [
   },
   {
     id: 1,
+    platform: "web",
     title: "Sufra - Community Food Sharing",
     icon: "🍲",
     type: "Full-Stack Social Platform",
@@ -119,6 +125,7 @@ const projects = [
   },
   {
     id: 2,
+    platform: "mobile",
     title: "Dream Weaver",
     icon: "🧠",
     type: "AI Mobile App",
@@ -138,6 +145,7 @@ const projects = [
   },
   {
     id: 3,
+    platform: "web",
     title: "Velour Beauty",
     icon: "✨",
     type: "E-Commerce",
@@ -156,6 +164,7 @@ const projects = [
   },
   {
     id: 9,
+    platform: "web",
     title: "Tala Net — ISP Customer Portal",
     icon: "📡",
     type: "Full-Stack Web Application",
@@ -174,6 +183,7 @@ const projects = [
   },
   {
     id: 5,
+    platform: "mobile",
     title: "Course Management Institute",
     icon: "🎓",
     type: "Flutter Mobile App",
@@ -189,6 +199,25 @@ const projects = [
     accentRgb: "168,85,247",
     github: "https://github.com/r1356-w/application-for-managing-courses-institute",
     live: null,
+  },
+];
+
+const platforms = [
+  {
+    key: "mobile",
+    title: "Mobile Apps",
+    subtitle: "Flutter · Android & iOS",
+    icon: "📱",
+    accent: "#22D3EE",
+    accentRgb: "34,211,238",
+  },
+  {
+    key: "web",
+    title: "Web Platforms",
+    subtitle: "React · Node.js · Full-Stack",
+    icon: "🌐",
+    accent: "#A855F7",
+    accentRgb: "168,85,247",
   },
 ];
 
@@ -214,11 +243,54 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {projects.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} />
-          ))}
+        {/* Platform groups */}
+        <div className="space-y-16">
+          {platforms.map((platform) => {
+            const items = projects.filter((p) => p.platform === platform.key);
+            return (
+              <div key={platform.key} id={`projects-${platform.key}`}>
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="flex items-center gap-3 mb-6"
+                >
+                  <div
+                    className="w-10 h-10 rounded-xl flex items-center justify-center text-lg"
+                    style={{
+                      background: `rgba(${platform.accentRgb}, 0.1)`,
+                      border: `1px solid rgba(${platform.accentRgb}, 0.2)`,
+                    }}
+                  >
+                    {platform.icon}
+                  </div>
+                  <div>
+                    <h3 className="font-display text-xl font-semibold text-white leading-tight">
+                      {platform.title}
+                    </h3>
+                    <p className="text-xs text-slate-400 font-mono mt-0.5">{platform.subtitle}</p>
+                  </div>
+                  <span
+                    className="ml-auto text-xs font-mono px-2 py-1 rounded"
+                    style={{
+                      color: platform.accent,
+                      background: `rgba(${platform.accentRgb}, 0.08)`,
+                      border: `1px solid rgba(${platform.accentRgb}, 0.15)`,
+                    }}
+                  >
+                    {items.length} projects
+                  </span>
+                </motion.div>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {items.map((project, i) => (
+                    <ProjectCard key={project.id} project={project} index={i} />
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         {/* GitHub CTA */}

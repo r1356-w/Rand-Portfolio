@@ -37,7 +37,7 @@ export default function Hero() {
                   color: "#22D3EE",
                 }}>
                 <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-                Available for opportunities
+                Open to work
               </span>
             </motion.div>
 
