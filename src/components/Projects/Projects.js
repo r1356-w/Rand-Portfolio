@@ -5,6 +5,36 @@ import SectionLabel from "../UI/SectionLabel";
 
 const projects = [
   {
+    id: 12,
+    platform: "mobile",
+    title: "Pagewise PDF — All-in-One PDF Tools",
+    icon: "📄",
+    type: "Android App · PDF Editor",
+    role: "Solo developer: designed, built, tested, and published.",
+    description:
+      "An Android app that brings all PDF tools together, processed entirely on the device — no uploads and no account. Fully bilingual in Arabic and English.",
+    highlights: [
+      "Built-in document scanner with edge detection, perspective correction, and filters",
+      "ID card tool that places both sides on one A4 page at real size",
+      "Full PDF toolkit — merge, organize, crop, sign, add text, image/web-to-PDF — with a biometric-locked file vault",
+    ],
+    stack: [
+      "Flutter",
+      "Dart",
+      "Riverpod",
+      "pdfrx",
+      "Syncfusion PDF",
+      "Isolates",
+      "AdMob + UMP",
+      "local_auth",
+    ],
+    accent: "#A855F7",
+    accentRgb: "168,85,247",
+    github: null,
+    live: null,
+    note: "Pending Google Play release",
+  },
+  {
     id: 11,
     platform: "mobile",
     title: "Wasla (وصلة) — Arabic Puzzle Game",
