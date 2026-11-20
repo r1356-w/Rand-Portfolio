@@ -16,10 +16,11 @@ const experiences = [
     role: "Full-Stack Developer",
     company: "Sityx",
     period: "05/2023 – Present",
-    type: "Full-time · Remote",
+    type: "Part-time · Remote",
     description: "Working remote for Sityx, a cloud hosting and software company based in Suwayda. I joined as a backend developer, moved into Flutter development after completing the company's training, and today build and maintain web applications end-to-end — from responsive frontends to backend APIs, databases, and deployment.",
     phases: [
-      { period: "02/2026 – Present", label: "Full-time", title: "Full-Stack Developer" },
+      { period: "11/2026 – Present", label: "Part-time", title: "Full-Stack Developer" },
+      { period: "02/2026 – 10/2026", label: "Full-time", title: "Full-Stack Developer" },
       { period: "05/2023 – 01/2026", label: "Part-time", title: "Backend Developer, then Flutter Developer after training" },
     ],
     skills: ["Node.js", "Express", "React", "Flutter", "REST APIs", "Databases"],

@@ -35,6 +35,26 @@ const projects = [
     note: "Pending Google Play release",
   },
   {
+    id: 13,
+    platform: "mobile",
+    title: "Aman Go (أمان غو) — Ride-Hailing App",
+    icon: "🚕",
+    type: "Mobile App",
+    role: "Flutter developer — built the app UI at Sityx.",
+    description:
+      "A local Uber-style taxi ride-hailing app for Suwayda, built at Sityx. Responsible for designing and implementing the full user-facing interface using Flutter, delivering a smooth, intuitive booking and ride-tracking experience.",
+    highlights: [
+      "Complete rider UI: booking flow, driver matching, and live ride tracking",
+      "Clean, responsive Flutter interface optimized for the local market",
+      "Integrated with backend services for real-time ride dispatch and status updates",
+    ],
+    stack: ["Flutter", "Dart", "Google Maps", "REST APIs", "State Management"],
+    accent: "#22D3EE",
+    accentRgb: "34,211,238",
+    github: null,
+    live: null,
+  },
+  {
     id: 11,
     platform: "mobile",
     title: "Wasla (وصلة) — Arabic Puzzle Game",
